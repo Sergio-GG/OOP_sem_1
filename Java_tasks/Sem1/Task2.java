@@ -5,9 +5,21 @@ package Java_tasks.Sem1;
  */
 public class Task2 {
     public static void main(String[] args) {
-        int first = 1;
-        for (int i = 0; i < 1000; i++) {
-            System.out.println(i);
-        }
+        
+        for (int i = 1; i < 1000; i++) {
+            int k = 0;
+            if (i < 2) {
+                continue;
+            }
+            for (int j = 2; j < i / 2 + 1 ; j++) {
+                if (i % j == 0){
+                    k++;
+                }                        
+            }
+        if (k == 0){
+            System.out.println(i); 
+        }        
+        }            
     }
 }
+
